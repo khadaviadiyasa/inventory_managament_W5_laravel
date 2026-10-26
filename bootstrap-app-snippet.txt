@@ -1,0 +1,5 @@
+// bootstrap/app.php  -> di dalam ->withMiddleware(...)
+use App\Http\Middleware\EnsureRole;
+
+$middleware->alias(['role' => EnsureRole::class]);
+$middleware->redirectUsersTo('/dashboard');
